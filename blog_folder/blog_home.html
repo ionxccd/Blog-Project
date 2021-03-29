@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <style>
+            .bodys{
+                text-align: center;
+                color: black;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            hr.borders{
+                border-bottom: 4px solid #000;
+                border-radius: 6px;
+            }
+
+            .list_post{
+                background-color: gray;
+                width: 900px;
+                padding: 20px;
+                margin: 20px;
+            }
+
+            #author_id{
+                display:block;
+                font-size: 16px;
+                text-align: left;
+                text-decoration: none;
+                color: rgb(65, 65, 214);
+                ;
+            }
+
+            #author_id:hover{
+                text-decoration: none;
+            }
+
+            #posteds{
+                text-align: right; 
+                display:block;
+            }
+
+            #login_id{
+                display: block;
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body style="background-color: lightgray;">
+        <div class="bodys">
+            <h1>David's Programmer Blog</h1>
+            <a href="link" id="login_id">Login In</a>
+            <hr class="borders">
+        </div>
+
+        {%for blog in blog_info%}
+            <div class="list_post">
+                <a id="author_id" href="#">{{blog.1}}</a>
+                <small id="posteds">Posted On:{{blog.2}}</small>
+                <h3 id="title">{{blog.0}}</h3>
+                <hr>
+                <h4>{{blog.3}}</h4>
+            </div>
+        {%endfor%}
+    </body>
+</html>

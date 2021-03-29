@@ -1,0 +1,103 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>User Login</title>
+            
+            <style>
+                .orgin{
+                    position: absolute;
+                    bottom: 100;
+                    right: 500;
+                }
+                .contain{
+                    border-radius: 25px;
+                    padding: 20px;
+                    border: 2px solid lightgray;
+                    width: 100%;
+                    height: 50%;
+                }
+                
+                input[type=checkbox] {
+                  margin: 4px 0 0;
+                  margin-top: 1px \9;
+                  line-height: normal;
+                }
+                
+                #texts{
+                    text-align: center
+                }
+                
+                #txt_box{
+                    border-radius: 15px;
+                    border: 2px solid lightgray;
+                    width: 100%;
+                    font-size: 15px;
+                    line-height: 4em;
+                    font-size: 15px;
+                }
+                
+                .move{
+                    margin-right: 50%
+                }
+                
+                #txt_passw{
+                    border-radius: 15px;
+                    border: 2px solid lightgray;
+                    width: 100%;
+                    font-size: 15px;
+                    line-height: 4em;
+                    font-size: 15px;
+                }
+                #btn_style{
+                    width: 300px;
+                    height: 50px;
+                    background-color: blue;
+                    color: white;
+                    border: 2px;
+                    border-radius: 30px;
+                    -ms-transform: translate(0%, 0%);
+                    transform: translate(5%, 0%);
+                    transition: .5s;
+                    cursor: pointer
+                }
+                
+                #btn_style:hover{
+                    background-color: #FFA500;
+                    color: black
+                }
+                
+                #btn_style:active{
+                    background-color: #FF4500
+                }
+            </style>
+            
+            <script>
+                function showpw(){
+                    var pass_screen = document.getElementById("txt_passw");
+                    if (pass_screen.type === "password"){
+                        pass_screen.type = "text";
+                    }else{
+                        pass_screen.type = "password";
+                    }
+                }
+            </script>
+        </head>
+        <body>
+            <div class="orgin">
+                <div class="contain">
+                    <form action="/login_user/" method="POST">
+                        <h2>Login</h2>
+                        <h3 id="texts">Username</h3>
+                        <input type="text" id="txt_box" name="username" placeholder="Enter Username">
+                        
+                        <h3 id="texts">Password</h3>
+                        <input type="checkbox" onclick="showpw()"> Show Password
+                        <input type="password" name="password" id="txt_passw" placeholder="Enter Password" autocomplete="on"><br><br>
+                        
+                        <input type="submit" id="btn_style" value="Log In" height="20">
+                        <!--<h4 id="texts">Not a user? <a href="">Sign Up</a></h4>-->
+                    </form>
+                </div>
+            </div>
+        </body>
+    </html>

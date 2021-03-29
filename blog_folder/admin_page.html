@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            
+        </script>
+        <style>
+            .center{
+                border-radius: 25px;
+                padding: 20px;
+                border: 2px solid lightgray;
+                width: 100%;
+                height: 50%;
+            }
+
+            .divde{
+                border: 2px solid black;
+            }
+
+            #containter{
+                text-align: center;
+            }
+
+            #legend{
+                text-align: left;
+                border-radius: 102px;
+            }
+
+            #content_text{
+                height: 120px;
+            }
+
+            #title_text{
+                width: 370px;
+                height: 30px;
+                font-size: px;
+            }
+
+            #enter_btn{
+                width: 100px;
+                height: 50px;
+                background-color: rgb(202, 39, 39);
+            }
+
+            #enter_btn:hover{
+                background-color: rgb(192, 24, 24);
+            }
+
+            #enter_btn:active{
+                background-color: rgb(230, 31, 31);
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="containter">Admin Page - Control Page</h1>
+        <hr class="divde">
+        <div class="centers"><br>
+            <fieldset><br>
+                <legend id="legend">Create Post</legend>
+                <form action="/create_post/" method="POST">
+                    <label for="title_text">Title:</label>
+                    <input type="text" name="title" id="title_text" placeholder="Enter Title"><br><br>
+                    <label for="content_text">Content:</label><br>
+                    <textarea type="textarea" name="content" id="content_text" rows="5" cols="60" placeholder="Enter Optional Post"></textarea>
+                    <br><input type="submit" id="enter_btn" value="Post">
+                </form>
+            </fieldset>
+        </div>
+        </div>
+    </body>
+</html>
